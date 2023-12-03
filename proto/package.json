@@ -1,0 +1,16 @@
+{
+  "name": "proto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate-proto": "tsproto --path ./proto --output ./proto "
+  },
+  "keywords": [],
+  "author": "Georgi Manolov",
+  "license": "ISC",
+  "dependencies": {
+    "nestjs-proto-gen-ts": "^1.0.21",
+    "rxjs": "^7.8.1"
+  }
+}

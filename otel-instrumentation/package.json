@@ -1,0 +1,33 @@
+{
+  "name": "otel-instrumentation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/otel.js",
+  "types": "dist/otel.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "keywords": [],
+  "author": "Georgi Manolov",
+  "license": "ISC",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@opentelemetry/exporter-logs-otlp-grpc": "^0.45.1",
+    "@opentelemetry/exporter-metrics-otlp-grpc": "^0.45.1",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.45.1",
+    "@opentelemetry/host-metrics": "^0.33.2",
+    "@opentelemetry/instrumentation-grpc": "^0.45.1",
+    "@opentelemetry/instrumentation-http": "^0.45.1",
+    "@opentelemetry/instrumentation-winston": "^0.33.0",
+    "@opentelemetry/resources": "^1.18.1",
+    "@opentelemetry/sdk-metrics": "^1.18.1",
+    "@opentelemetry/sdk-node": "^0.45.1",
+    "@opentelemetry/semantic-conventions": "^1.18.1",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.2"
+  }
+}

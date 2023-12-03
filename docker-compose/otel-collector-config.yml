@@ -1,0 +1,55 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+
+exporters:
+  prometheus:
+    endpoint: "0.0.0.0:8889"
+  logging:
+    loglevel: debug
+  loki:
+    endpoint: http://loki:3100/loki/api/v1/push
+    tls:
+      insecure: true
+    default_labels_enabled:
+      exporter: false
+      job: true
+  otlp:
+    endpoint: "jaeger:4317"
+    tls:
+      insecure: true
+  debug:
+    verbosity: detailed
+
+connectors:
+  spanmetrics:
+
+processors:
+  batch:
+  metricstransform:
+    transforms:
+      - include: queueSize
+        match_type: strict
+        experimental_match_labels: {"spanProcessorType" :"BatchSpanProcessor"}
+        action: update
+        new_name: "spanQueueSize"
+      - include: queueSize
+        match_type: strict
+        experimental_match_labels: { "logRecordProcessorType": "BatchLogRecordProcessor" }
+        action: update
+        new_name: "logQueueSize"
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      exporters: [spanmetrics, otlp]
+    metrics/AspanmetricsB:
+      receivers: [otlp, spanmetrics]
+      processors: [metricstransform]
+      exporters: [prometheus]
+    logs:
+      receivers: [otlp]
+      exporters: [debug, loki]

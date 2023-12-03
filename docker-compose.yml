@@ -1,0 +1,78 @@
+version: '3.8'
+
+
+services:
+  jaeger:
+    image:  jaegertracing/all-in-one:1.51
+    volumes:
+      - "./docker-compose/jaeger-ui.json:/etc/jaeger/jaeger-ui.json"
+    command: --query.ui-config /etc/jaeger/jaeger-ui.json --prometheus.query.support-spanmetrics-connector=true
+    ports:
+      - "16686:16686"
+    environment:
+      - METRICS_STORAGE_TYPE=prometheus
+      - PROMETHEUS_SERVER_URL=http://prometheus:9090
+      - LOG_LEVEL=debug
+      - PROMETHEUS_QUERY_SUPPORT_SPANMETRICS_CONNECTOR=${PROMETHEUS_QUERY_SUPPORT_SPANMETRICS_CONNECTOR}
+      - PROMETHEUS_QUERY_NAMESPACE=${PROMETHEUS_QUERY_NAMESPACE}
+      - PROMETHEUS_QUERY_DURATION_UNIT=${PROMETHEUS_QUERY_DURATION_UNIT}
+  otel_collector:
+    image: otel/opentelemetry-collector-contrib:0.89.0
+    volumes:
+      - "./docker-compose/otel-collector-config.yml:/etc/otelcol/otel-collector-config.yml"
+    command: --config /etc/otelcol/otel-collector-config.yml
+    ports:
+      - "4317:4317"
+      - "4318:4318"
+      - "8889:8889"
+    depends_on:
+      - jaeger
+
+  prometheus:
+    image: prom/prometheus:v2.44.0
+    volumes:
+      - "./docker-compose/prometheus.yml:/etc/prometheus/prometheus.yml"
+    ports:
+      - "9090:9090"
+
+  grafana:
+    image: grafana/grafana:10.0.3
+    volumes:
+      - ./docker-compose/grafana.ini:/etc/grafana/grafana.ini
+      - ./docker-compose/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yaml
+    environment:
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_AUTH_DISABLE_LOGIN_FORM=true
+    ports:
+      - 3000:3000
+
+  loki:
+    image: grafana/loki:2.8.0
+    ports:
+      - "3100:3100"
+    command: -config.file=/etc/loki/local-config.yaml
+  first-service:
+    build:
+      context: .
+      dockerfile: ./first-service/Dockerfile
+    environment:
+      - APP_NAME=second-http-service
+      - OTEL_TRACE_EXPORTER_URL='http://otel_collector:4317
+      - OTEL_METRICS_EXPORTER_URL='http://otel_collector:4317
+      - OTEL_LOGS_EXPORTER_URL='http://otel_collector:4317'
+      - SECOND_SERVICE_HTTP_URL=second-service:3001
+      - SECOND_SERVICE_GRPC_URL=second-service:5001
+    ports:
+      - 3002:3002
+  second-service:
+    build:
+      context: .
+      dockerfile: ./second-service/Dockerfile
+    environment:
+      - APP_NAME=second-http-service
+      - OTEL_TRACE_EXPORTER_URL='http://otel_collector:4317
+      - OTEL_METRICS_EXPORTER_URL='http://otel_collector:4317
+      - OTEL_LOGS_EXPORTER_URL='http://otel_collector:4317
+      
+  
