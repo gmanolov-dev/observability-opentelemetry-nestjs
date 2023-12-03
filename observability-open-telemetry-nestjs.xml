@@ -1,0 +1,205 @@
+<mxfile host="app.diagrams.net" modified="2023-12-03T18:26:44.944Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="DSxfZueGVzq--4K5Ozob" version="22.1.5" type="device">
+  <diagram name="Page-1" id="axnyOl4nLSGPqD-9hxK9">
+    <mxGraphModel dx="1562" dy="862" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="aH__eNUofM4PdDlsRc-b-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="350" width="1100" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-2" value="Docker" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="370" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-3" value="First Service" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="70" y="440" width="130" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-5" value="Open Telemetry&lt;br&gt;Instrumentation" style="rounded=0;whiteSpace=wrap;html=1;rotation=270;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="150" y="490" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-8" value="Second Service" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="70" y="730" width="130" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-9" value="Open Telemetry&lt;br&gt;Instrumentation" style="rounded=0;whiteSpace=wrap;html=1;rotation=270;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="150" y="780" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-10" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="aH__eNUofM4PdDlsRc-b-8" target="aH__eNUofM4PdDlsRc-b-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="700" as="sourcePoint" />
+            <mxPoint x="450" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-11" value="GRPC" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aH__eNUofM4PdDlsRc-b-10">
+          <mxGeometry x="-0.1" y="-1" relative="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-12" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="aH__eNUofM4PdDlsRc-b-8" target="aH__eNUofM4PdDlsRc-b-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="113" y="740" as="sourcePoint" />
+            <mxPoint x="113" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-14" value="HTTP" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aH__eNUofM4PdDlsRc-b-12">
+          <mxGeometry x="-0.1286" y="-4" relative="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-15" value="Action Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="120" y="130" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-16" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="aH__eNUofM4PdDlsRc-b-15" target="aH__eNUofM4PdDlsRc-b-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="700" as="sourcePoint" />
+            <mxPoint x="450" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-17" value="HTTP Request&amp;nbsp;&lt;br&gt;http://localhost:3002/http&lt;br&gt;&amp;nbsp; http://localhost:3002/grpc" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aH__eNUofM4PdDlsRc-b-16">
+          <mxGeometry x="-0.0435" y="4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-18" value="Open Telemetry Collector" style="rounded=0;whiteSpace=wrap;html=1;rotation=-90;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="190" y="630" width="440" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-19" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.833;entryY=0.047;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="aH__eNUofM4PdDlsRc-b-5" target="aH__eNUofM4PdDlsRc-b-18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="570" as="sourcePoint" />
+            <mxPoint x="550" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-20" value="logs, metrics &lt;br&gt;and traces (spans)&lt;br&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aH__eNUofM4PdDlsRc-b-19">
+          <mxGeometry x="-0.1718" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-21" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.177;entryY=0.007;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="aH__eNUofM4PdDlsRc-b-9" target="aH__eNUofM4PdDlsRc-b-18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="245" y="525" as="sourcePoint" />
+            <mxPoint x="393" y="523" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-22" value="logs, metrics &lt;br&gt;and traces (spans)&lt;br&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aH__eNUofM4PdDlsRc-b-21">
+          <mxGeometry x="-0.1718" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-24" value="Loki" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="650" y="790" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-25" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="aH__eNUofM4PdDlsRc-b-18" target="aH__eNUofM4PdDlsRc-b-24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="570" as="sourcePoint" />
+            <mxPoint x="550" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-26" value="Export Logs To Loki" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aH__eNUofM4PdDlsRc-b-25">
+          <mxGeometry x="-0.0236" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-28" value="Jaeger" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="650" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-29" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="aH__eNUofM4PdDlsRc-b-18" target="aH__eNUofM4PdDlsRc-b-28">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="570" as="sourcePoint" />
+            <mxPoint x="550" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-31" value="Export Traces(Spans) To Jaeger" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aH__eNUofM4PdDlsRc-b-29">
+          <mxGeometry x="-0.1396" relative="1" as="geometry">
+            <mxPoint x="28" y="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-30" value="Prometheus" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="650" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-34" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.464;exitY=0.993;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="aH__eNUofM4PdDlsRc-b-18" target="aH__eNUofM4PdDlsRc-b-30">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="570" as="sourcePoint" />
+            <mxPoint x="550" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-35" value="Read Metrics from&amp;nbsp;&lt;br&gt;Open Telemetry Collector" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aH__eNUofM4PdDlsRc-b-34">
+          <mxGeometry x="0.0148" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-36" value="Grafana&lt;br&gt;(Logs and Metrics visualizer)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="930" y="610" width="190" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-37" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.993;entryY=0.65;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="aH__eNUofM4PdDlsRc-b-36" target="aH__eNUofM4PdDlsRc-b-30">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="570" as="sourcePoint" />
+            <mxPoint x="550" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-38" value="Read Metrics From&amp;nbsp;&lt;br&gt;Prometheus" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aH__eNUofM4PdDlsRc-b-37">
+          <mxGeometry x="0.1167" y="-1" relative="1" as="geometry">
+            <mxPoint y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-39" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="aH__eNUofM4PdDlsRc-b-36" target="aH__eNUofM4PdDlsRc-b-24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="570" as="sourcePoint" />
+            <mxPoint x="550" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-40" value="Read Logg From&lt;br&gt;Loki" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aH__eNUofM4PdDlsRc-b-39">
+          <mxGeometry x="0.26" relative="1" as="geometry">
+            <mxPoint x="21" y="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-44" value="Monitoring Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="695" y="140" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-45" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aH__eNUofM4PdDlsRc-b-44" target="aH__eNUofM4PdDlsRc-b-28">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="570" as="sourcePoint" />
+            <mxPoint x="550" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-46" value="Retrieve Traces&amp;nbsp;&lt;br&gt;From Jaeger" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aH__eNUofM4PdDlsRc-b-45">
+          <mxGeometry x="0.0257" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-47" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aH__eNUofM4PdDlsRc-b-44" target="aH__eNUofM4PdDlsRc-b-36">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="570" as="sourcePoint" />
+            <mxPoint x="550" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-48" value="Retrieve Logs and Metrics&lt;br&gt;From Grafana" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="aH__eNUofM4PdDlsRc-b-47">
+          <mxGeometry x="-0.4915" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-50" value="Legend" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="850" y="140" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-51" value="Custom Microservice" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="930" y="140" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-52" value="Third Party App" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="930" y="220" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-53" value="Oepn Telemetry" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="930" y="180" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-54" value="Open Telemetry&amp;nbsp;&lt;br&gt;Instrumentation" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="140" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-56" value="Observability using OpenTelemetry&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=23;" vertex="1" parent="1">
+          <mxGeometry x="60" y="40" width="520" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-57" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="aH__eNUofM4PdDlsRc-b-58" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="920" width="20" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
