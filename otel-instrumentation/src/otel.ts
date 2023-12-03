@@ -25,6 +25,8 @@ import { OTLPLogExporter } from '@opentelemetry/exporter-logs-otlp-grpc';
 // const { DiagConsoleLogger, DiagLogLevel, diag } = require('@opentelemetry/api');
 // diag.setLogger(new DiagConsoleLogger(), DiagLogLevel.DEBUG);
 
+console.log(process.env);
+
 const traceExporter =  new OTLPTraceExporter({
   url: process.env.OTEL_TRACE_EXPORTER_URL || 'http://localhost:4317',
 })

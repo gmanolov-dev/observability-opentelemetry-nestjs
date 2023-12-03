@@ -57,10 +57,10 @@ services:
       context: .
       dockerfile: ./first-service/Dockerfile
     environment:
-      - APP_NAME=second-http-service
-      - OTEL_TRACE_EXPORTER_URL='http://otel_collector:4317
-      - OTEL_METRICS_EXPORTER_URL='http://otel_collector:4317
-      - OTEL_LOGS_EXPORTER_URL='http://otel_collector:4317'
+      - APP_NAME=FIRST_SERVICE
+      - OTEL_TRACE_EXPORTER_URL=http://otel_collector:4317
+      - OTEL_METRICS_EXPORTER_URL=http://otel_collector:4317
+      - OTEL_LOGS_EXPORTER_URL=http://otel_collector:4317
       - SECOND_SERVICE_HTTP_URL=second-service:3001
       - SECOND_SERVICE_GRPC_URL=second-service:5001
     ports:
@@ -70,9 +70,10 @@ services:
       context: .
       dockerfile: ./second-service/Dockerfile
     environment:
-      - APP_NAME=second-http-service
-      - OTEL_TRACE_EXPORTER_URL='http://otel_collector:4317
-      - OTEL_METRICS_EXPORTER_URL='http://otel_collector:4317
-      - OTEL_LOGS_EXPORTER_URL='http://otel_collector:4317
+      - APP_NAME=second-FIRST_SERVICE
+      - OTEL_TRACE_EXPORTER_URL=http://otel_collector:4317
+      - OTEL_METRICS_EXPORTER_URL=http://otel_collector:4317
+      - OTEL_LOGS_EXPORTER_URL=http://otel_collector:4317
+      - SECOND_SERVICE_GRPC_URL=second-service:5001
       
   

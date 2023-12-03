@@ -34,7 +34,7 @@ async function bootstrap() {
     options: {
       package: 'hello',
       protoPath: join(__dirname, './proto/hello.proto'),
-      url: '127.0.0.1:5001',
+      url: process.env.SECOND_SERVICE_GRPC_URL || '127.0.0.1:5001',
     },
   });
 
